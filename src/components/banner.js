@@ -5,21 +5,21 @@ import { useStaticQuery, graphql } from "gatsby"
 const Banner = () => {
   const data = useStaticQuery(graphql`
     query {
-      grimesfour: file(relativePath: { eq: "grimes4.jpg" }) {
+      orange: file(relativePath: { eq: "orange.png" }) {
         childImageSharp {
           fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      grimestwo: file(relativePath: { eq: "grimes2.jpg" }) {
+      glasses: file(relativePath: { eq: "glasses.png" }) {
         childImageSharp {
           fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      grimesfive: file(relativePath: { eq: "grimes5.jpg" }) {
+      red: file(relativePath: { eq: "red.png" }) {
         childImageSharp {
           fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid
@@ -33,14 +33,26 @@ const Banner = () => {
       <div className="container">
         <div className="row">
           <div className="side-image left">
-            <Img fluid={data.grimestwo.childImageSharp.fluid} />
+            <Img
+              fadeIn={true}
+              durationFadeIn={1000}
+              fluid={data.orange.childImageSharp.fluid}
+            />
           </div>
           <div className="main-text">Oladimeji Odunsi</div>
           <div className="main-image">
-            <Img fluid={data.grimesfive.childImageSharp.fluid} />
+            <Img
+              fadeIn={true}
+              durationFadeIn={1000}
+              fluid={data.glasses.childImageSharp.fluid}
+            />
           </div>
           <div className="side-image right">
-            <Img fluid={data.grimesfour.childImageSharp.fluid} />
+            <Img
+              fadeIn={true}
+              durationFadeIn={1000}
+              fluid={data.red.childImageSharp.fluid}
+            />
           </div>
         </div>
         <div className="scroll">

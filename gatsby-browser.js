@@ -5,3 +5,10 @@
  */
 
 // You can delete this file if you're not using it
+// import React from "react"
+// import Scrollbar from "smooth-scrollbar-react"
+
+// export const wrapRootElement = ({ element }) => {
+//   // const [toggleMenu, setToggleMenu] = useState(false)
+//   return <Scrollbar>{element}</Scrollbar>
+// }
